@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2603986208d0a6e4a932312b84902920
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - logic: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - prefab: {fileID: 3465735828022529483, guid: 0bdcaab20a197d54aaa3dd0462a34651, type: 3}
+  - popUpTxt: {instanceID: 0}
+  - worldCanvas: {instanceID: 0}
+  - healthBar: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
