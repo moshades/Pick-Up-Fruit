@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -35324622302054645}
   m_Layer: 0
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -185,4 +185,3 @@ MonoBehaviour:
   popUpTxt: {fileID: 0}
   worldCanvas: {fileID: 0}
   healthBar: {fileID: 0}
-  bombSFX: {fileID: 2528336626257805697, guid: 6efbb9fd9b9edbb40a22736a0c0a6066, type: 3}

@@ -14,15 +14,4 @@ public class Fruit : MonoBehaviour
     public GameObject popUpTxt;
     public Canvas worldCanvas;
     public HealthBar healthBar;
-
-    public virtual void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Basket")
-        {
-            Instantiate(popUpTxt, transform.position, Quaternion.identity, worldCanvas.transform)
-                .GetComponentInChildren<TextMeshProUGUI>().text = "+" + point;
-            logic.AddScore(point);
-            Destroy(gameObject);
-        }
-    }
 }

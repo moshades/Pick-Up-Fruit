@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Logic
-  - Basket
   - Effect
   - Heart
   - Health
+  - Fruit
+  - Bomb
   layers:
   - Default
   - TransparentFX

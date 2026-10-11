@@ -1,8 +1,11 @@
+using System.Drawing;
+using TMPro;
 using UnityEngine;
 
 public class Basket : MonoBehaviour
 {
     public Rigidbody2D basketRigidbody;
+    public AudioSource bombSFX;
     public LogicManager logic;
     public Camera mainCam;
 
@@ -18,12 +21,6 @@ public class Basket : MonoBehaviour
 
         minX = mainCam.transform.position.x - halfWidth + halfBasket;
         maxX = mainCam.transform.position.x + halfWidth - halfBasket;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnMouseDrag()
@@ -43,6 +40,20 @@ public class Basket : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Fruit"))
+        {
+            var script = collision.GetComponent<Fruit>();
+            Instantiate(script.popUpTxt, transform.position, Quaternion.identity, script.worldCanvas.transform)
+                .GetComponentInChildren<TextMeshProUGUI>().text = "+" + script.point;
+            logic.AddScore(script.point);
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Bomb"))
+        {
+            bombSFX.Play();
+            logic.GameOver();
+            Destroy(collision.gameObject);
+        }
     }
 }
